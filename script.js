@@ -227,20 +227,45 @@ document.addEventListener('DOMContentLoaded', function() {
             submitButton.disabled = true;
             submitButton.style.opacity = '0.7';
 
-            // Simulate form submission
-            setTimeout(() => {
-                alert('Thank you for your message! I will get back to you soon.');
-                this.reset();
-                submitButton.textContent = submitText;
-                submitButton.disabled = false;
-                submitButton.style.opacity = '1';
+            // Get form data
+            const formData = new FormData(contactForm);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                message: formData.get('message')
+            };
+
+            // Replace with your backend URL (e.g., 'https://your-app.herokuapp.com')
+            const API_URL = 'https://your-backend-url.com/contact';
+
+            // Send POST request to backend
+            fetch(API_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message || 'Thank you for your message! I will get back to you soon.');
+                contactForm.reset();
 
                 // Reset input styles
                 inputs.forEach(input => {
                     input.style.borderColor = 'var(--gray-300)';
                     input.style.transform = 'translateY(0)';
                 });
-            }, 2000);
+            })
+            .catch(error => {
+                console.error('Form submission error:', error);
+                alert('Sorry, there was an error sending your message. Please try again later.');
+            })
+            .finally(() => {
+                submitButton.textContent = submitText;
+                submitButton.disabled = false;
+                submitButton.style.opacity = '1';
+            });
         });
     }
 
