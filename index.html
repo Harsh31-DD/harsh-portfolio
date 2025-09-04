@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harsh - Creative Graphic Designer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header / Navbar -->
+    <header id="header">
+        <nav class="navbar">
+            <div class="logo">Harsh</div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Harsh</h1>
+            <h2>Creative Graphic Designer</h2>
+            <p class="typing" id="typing-text"></p>
+            <div class="hero-buttons">
+                <a href="#portfolio" class="cta-button primary-btn">View My Work</a>
+                <a href="#contact" class="cta-button secondary-btn">Hire Me</a>
+            </div>
+        </div>
+        <div class="hero-shape"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-container">
+                        <img src="assets/profile photo/WhatsApp Image 2025-09-04 at 9.24.37 PM.jpeg" alt="Harsh - Creative Graphic Designer">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>I'm a passionate creative graphic designer with a keen eye for detail and a love for bringing ideas to life through visual storytelling. With extensive experience in digital design, I specialize in creating stunning visuals that not only look beautiful but also effectively communicate with target audiences.</p>
+                    <p>My design philosophy focuses on clean aesthetics, thoughtful typography, and impactful color palettes that resonate with modern trends. I believe great design is both functional and unforgettable.</p>
+
+                    <div class="tools-section">
+                        <h3>Tools & Software</h3>
+                        <div class="tools-grid">
+                            <div class="tool-item">
+                                <i class="fab fa-adobe"></i>
+                                <span>Photoshop</span>
+                            </div>
+                            <div class="tool-item">
+                                <i class="fab fa-figma"></i>
+                                <span>Figma</span>
+                            </div>
+                            <div class="tool-item">
+                                <i class="fab fa-canva"></i>
+                                <span>Canva</span>
+                            </div>
+                            <div class="tool-item">
+                                <i class="fab fa-illustrator"></i>
+                                <span>Illustrator</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>My Portfolio</h2>
+            <p class="section-subtitle">A showcase of my recent design projects</p>
+
+            <!-- Portfolio Grid - 3 projects from assets folder -->
+            <!-- Full-Width Project Blocks -->
+            <div class="portfolio-projects">
+
+                <!-- Project 1: Burger Poster - Full Width Block -->
+                <div class="project-block">
+                    <!-- Large image display -->
+                    <div class="project-media-large">
+                        <img src="assets/burger.png" alt="Burger Poster Design" loading="lazy">
+                    </div>
+                    <!-- Title and description centered below -->
+                    <div class="project-content">
+                        <h3 class="project-title">Burger Poster</h3>
+                        <p class="project-description">Modern poster design for a food brand featuring creative typography and vibrant colors that capture attention and drive customer engagement through professional visual communication</p>
+                    </div>
+                </div>
+
+                <!-- Project 2: Hot Dog Poster - Full Width Block -->
+                <div class="project-block">
+                    <div class="project-media-large">
+                        <img src="assets/HOT DOG (2).png" alt="Hot Dog Poster Design" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Hot Dog Advertisement</h3>
+                        <p class="project-description">Eye-catching advertisement poster for hot dog brand with bold graphics, enticing food photography, and strategic placement to maximize visual impact and brand recognition in competitive market environments</p>
+                    </div>
+                </div>
+
+                <!-- Project 3: Advertising Video - Full Width Block -->
+                <div class="project-block">
+                    <div class="project-media-large">
+                        <video autoplay muted loop playsinline preload="metadata">
+                            <source src="assets/Straw (3).mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Product Promotion Video</h3>
+                        <p class="project-description">Dynamic advertising video for product promotion showcasing innovative features, smooth animations, compelling storytelling, and brand messaging to create memorable viewing experiences that drive customer interest and engagement</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Services</h2>
+            <p class="section-subtitle">What I can do for you</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-pencil-alt"></i>
+                    </div>
+                    <h3>Logo Design</h3>
+                    <p>Professional logo design that captures your brand identity and makes a lasting impression on your audience.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h3>Poster Design</h3>
+                    <p>Eye-catching posters for events, promotions, and marketing campaigns that communicate effectively.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Branding</h3>
+                    <p>Complete brand identity including color palettes, typography, and brand guidelines for consistent presence.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h3>Social Media Graphics</h3>
+                    <p>Engaging graphics for social media platforms that increase engagement and showcase your brand personality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p class="section-subtitle">Ready to start your project? Let's collaborate!</p>
+
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <textarea name="message" placeholder="Tell me about your project..." required></textarea>
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <div class="social-links">
+                        <a href="#" class="social-link instagram" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link behance" aria-label="Behance">
+                            <i class="fab fa-behance"></i>
+                        </a>
+                        <a href="#" class="social-link dribbble" aria-label="Dribbble">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                        <a href="#" class="social-link linkedin" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">Harsh</div>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
+                    <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Harsh. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
