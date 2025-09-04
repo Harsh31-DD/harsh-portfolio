@@ -236,7 +236,7 @@ document.addEventListener('DOMContentLoaded', function() {
             };
 
             // Replace with your backend URL (e.g., 'https://your-app.herokuapp.com')
-            const API_URL = 'https://your-backend-url.com/contact';
+            const API_URL = 'http://localhost:3000/contact';
 
             // Send POST request to backend
             fetch(API_URL, {
@@ -246,8 +246,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 body: JSON.stringify(data)
             })
-            .then(response => response.json())
+            .then(response => {
+                console.log('Response status:', response.status);
+                console.log('Response headers:', response.headers);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
             .then(data => {
+                console.log('Success response:', data);
                 alert(data.message || 'Thank you for your message! I will get back to you soon.');
                 contactForm.reset();
 
@@ -259,7 +267,8 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .catch(error => {
                 console.error('Form submission error:', error);
-                alert('Sorry, there was an error sending your message. Please try again later.');
+                console.error('Error details:', error.message);
+                alert('Sorry, there was an error sending your message. Please try again later.\n\nError: ' + error.message);
             })
             .finally(() => {
                 submitButton.textContent = submitText;
