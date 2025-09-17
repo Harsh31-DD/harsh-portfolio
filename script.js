@@ -24,10 +24,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Typing animation for hero tagline
     const typingText = document.getElementById('typing-text');
     const taglines = [
-        "Creating visually stunning designs that bring your ideas to life.",
-        "Transforming concepts into beautiful visual realities.",
-        "Where creativity meets innovation in design.",
-        "Crafting memorable experiences through thoughtful design."
+        "Transforming concepts,",
+        "Creating visual stories,",
+        "Designing experiences,",
+        "Bringing ideas to life,"
     ];
 
     let taglineIndex = 0;
@@ -278,22 +278,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Portfolio hover effects for new project-block structure
-    const projectBlocks = document.querySelectorAll('.project-block');
-    
+    // Portfolio images display without hover effects
+
+    // Scroll-triggered fade-in animations
+    const portfolioObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const block = entry.target;
+                block.style.animation = 'fadeInUpWork 1s ease-out forwards';
+            }
+        });
+    }, { threshold: 0.1 });
+
     projectBlocks.forEach(block => {
-        const media = block.querySelector('.project-media-large');
-        const image = media?.querySelector('img') || media?.querySelector('video');
-    
-        if (image) {
-            block.addEventListener('mouseenter', function() {
-                image.style.transform = 'scale(1.02)';
-            });
-    
-            block.addEventListener('mouseleave', function() {
-                image.style.transform = 'scale(1)';
-            });
-        }
+        portfolioObserver.observe(block);
     });
     
     // Progressive loading animation for project blocks
